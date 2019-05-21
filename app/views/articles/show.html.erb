@@ -1,0 +1,11 @@
+<div class="container p-5">
+  <div class="card">
+    <img src="https://vignette.wikia.nocookie.net/totally-random-survivor/images/8/81/ChuckNorris.jpg/revision/latest?cb=20170523153333" class="card-img-top" alt="chuck norris">
+    <div class="card-body">
+      <h5 class="card-title"><%= @article.title %></h5>
+      <p class="card-text"><%= @article.content %></p>
+      <%= link_to "All facts", articles_path, class: "btn btn-primary" %> <%= link_to "Update fact", edit_article_path, class: "btn btn-primary" %> <%= link_to "Delete fact", article_path(@article), class: "btn btn-primary", method: :delete, data: { confirm: "Are you sure?" }%>
+    </div>
+  </div>
+
+</div>

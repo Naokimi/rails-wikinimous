@@ -1,0 +1,14 @@
+<div class="container p-5">
+  <h1>Norrifact</h1>
+  <% @articles.each do |article| %>
+    <div class="card m-2">
+      <div class="card-body">
+        <blockquote class="blockquote mb-0">
+          <p><%= link_to article.content, article_path(article) %></p>
+          <footer class="blockquote-footer"><%= article.title %></footer>
+        </blockquote>
+      </div>
+    </div>
+  <% end %>
+  <%= link_to "Add a new fact", new_article_path, class: "btn btn-primary" %>
+</div>
